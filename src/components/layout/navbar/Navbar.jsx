@@ -3,7 +3,8 @@ import Menu from "../../common/menu/menu";
 import { GrSearch, GrUser } from "react-icons/gr";
 import CartWidget from "../../common/cartWidget/CartWidget";
 
-const Navbar = () => {
+const Navbar = ({ items }) => {
+  //Ejemplo de estilos en linea
   const navbarStyle = {
     margin: "10px",
     display: "flex",
@@ -13,11 +14,12 @@ const Navbar = () => {
   return (
     <div>
       <div style={navbarStyle}>
-        <img src={logo} style={{ width: "150px" }} />
+        <img src={logo} style={{ width: "150px" }} />{" "}
+        {/* Ejemplo de estilo en linea */}
         <span style={{ flexGrow: 0.8 }}></span>
         <GrSearch />
         <GrUser />
-        <CartWidget />
+        <CartWidget items={items} />
       </div>
       <Menu />
     </div>

@@ -1,9 +1,9 @@
 import { GrCart } from "react-icons/gr";
 
-const CartWidget = () => {
+const CartWidget = ({ items }) => {
   return (
     <div>
-      <span>3</span>
+      <span>{items}</span>
       <GrCart />
     </div>
   );
