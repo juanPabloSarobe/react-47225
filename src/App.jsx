@@ -1,3 +1,4 @@
+import { Box, Button } from "@mui/material";
 import { useState } from "react";
 import Navbar from "./components/layout/navbar/Navbar";
 import Home from "./components/pages/home/Home";
@@ -20,8 +21,14 @@ function App() {
       <Navbar items={items} />
       <Home />
       <ItemListContainer greetings={greetings} color={"red"} />
-      <button onClick={changeGreetings}>Ingresar</button>
-      <button onClick={addItems}>Agregar producto</button>
+      <Box sx={{ display: "flex", m: 2, gap: 2 }}>
+        <Button variant="outlined" onClick={changeGreetings}>
+          Ingresar
+        </Button>
+        <Button variant="outlined" onClick={addItems}>
+          Agregar Producto
+        </Button>
+      </Box>
     </>
   );
 }
