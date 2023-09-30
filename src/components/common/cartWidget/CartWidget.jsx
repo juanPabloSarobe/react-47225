@@ -6,7 +6,7 @@ const CartWidget = ({ items }) => {
     <div>
       {/* <span>{items}</span> //Primera version de prueba */}
       <ShoppingCartOutlinedIcon color="info"></ShoppingCartOutlinedIcon>
-      <Badge badgeContent={items} color="warning" showZero="true"></Badge>
+      <Badge badgeContent={0} color="warning"></Badge>
     </div>
   );
 };

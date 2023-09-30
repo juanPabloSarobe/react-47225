@@ -1,7 +1,7 @@
 const Menu = () => {
   return (
     <div>
-      <ul style={{ display: "flex", "justify-content": "space-around" }}>
+      <ul style={{ display: "flex", justifyContent: "space-around" }}>
         <li>Promociones</li>
         <li>Combos</li>
         <li>Fernet</li>

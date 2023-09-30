@@ -8,7 +8,7 @@ const Navbar = ({ items }) => {
   const navbarStyle = {
     margin: "10px",
     display: "flex",
-    "justify-content": "space-around",
+    justifyContent: "space-around",
   };
 
   return (
