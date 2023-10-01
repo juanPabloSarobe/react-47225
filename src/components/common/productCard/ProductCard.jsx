@@ -10,7 +10,13 @@ import {
 const ProductCard = ({ item }) => {
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card
+        sx={{
+          maxWidth: 345,
+          transition: "transform 0.25s ease-in-out",
+          "&:hover": { transform: "scale3d(1.05, 1.05, 1)" },
+        }}
+      >
         <CardMedia
           component="img"
           alt="green iguana"
