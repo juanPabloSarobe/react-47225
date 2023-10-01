@@ -397,9 +397,9 @@ export const productsMockup = [
     price: 8.99,
     stock: 25,
     description:
-      "Refresca tu día con una selección de refrescos variados, como Soda Limón, Refresco de Uva y Refresco de Naranja.",
+      "Refresca tu día con una selección de refrescos variados, como Soda Limón, Refresco de Uva y Refresco de Naranja. ",
     category: "Combos",
-    img: "uhttps://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106880/81Q7RtpoBWS_ncrgkf.jpg",
+    img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106880/81Q7RtpoBWS_ncrgkf.jpg",
   },
   {
     id: 44,

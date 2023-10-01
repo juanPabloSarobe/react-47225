@@ -14,7 +14,7 @@ const Navbar = ({ items }) => {
   return (
     <div>
       <div style={navbarStyle}>
-        <img src={logo} style={{ width: "150px" }} />{" "}
+        <img src={logo} style={{ width: "150px" }} />
         {/* Ejemplo de estilo en linea */}
         <span style={{ flexGrow: 0.8 }}></span>
         <GrSearch />
