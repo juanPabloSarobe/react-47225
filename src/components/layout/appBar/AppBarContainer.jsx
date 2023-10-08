@@ -2,7 +2,7 @@ import * as React from "react";
 import AppBarReturn from "./AppBarReturn";
 
 const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", , "Logout"];
+const settings = ["Profile", "Account", "Logout"];
 
 const AppBarContainer = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

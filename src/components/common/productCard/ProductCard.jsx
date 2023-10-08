@@ -12,7 +12,7 @@ const ProductCard = ({ item }) => {
     <>
       <Card
         sx={{
-          maxWidth: 345,
+          width: 345,
           transition: "transform 0.25s ease-in-out",
           "&:hover": { transform: "scale3d(1.05, 1.05, 1)" },
         }}
