@@ -7,10 +7,8 @@ const ItemDetailContainer = (newId) => {
   const [id, setid] = useState(1);
 
   const changeId = () => {
-    if (!newId) {
-      const { item } = newId;
-      setid(item);
-    }
+    const { item } = newId;
+    setid(item);
   };
 
   useEffect(() => {
