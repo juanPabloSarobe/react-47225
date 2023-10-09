@@ -1,4 +1,4 @@
-import AddItems from "./components/common/addItems/AddItems";
+import AddItemsContainer from "./components/common/addItems/AddItemsContainer";
 import AppBarContainer from "./components/layout/appBar/AppBarContainer";
 import AppBarSpace from "./components/layout/appBar/AppBarSpace";
 import AxiosTest from "./components/pages/axiosTest/AxiosTest";
@@ -11,7 +11,6 @@ function App() {
     <>
       <AppBarContainer />
       <AppBarSpace />
-      {/*       <AddItems /> */}
 
       <ItemDetailContainer />
 
