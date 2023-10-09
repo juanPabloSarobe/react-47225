@@ -56,7 +56,7 @@ const ItemDetail = ({ item }) => {
                   Cantidad
                 </Typography>
                 <Box>
-                  <AddItemsContainer />
+                  <AddItemsContainer item={item} />
                 </Box>
               </Box>
             </CardContent>

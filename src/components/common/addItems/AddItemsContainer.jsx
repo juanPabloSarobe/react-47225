@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddItem from "./AddItem";
 
-const AddItemsContainer = () => {
+const AddItemsContainer = ({ item }) => {
   const [stock, setStock] = useState(4);
   const [items, setItems] = useState(1);
+
   const addItems = () => {
     if (items < stock) {
       setItems(items + 1);
@@ -14,8 +15,10 @@ const AddItemsContainer = () => {
       setItems(items - 1);
     }
   };
+  useEffect(() => {
+    setStock(item.stock);
+  }, [item.id]);
 
-  console.log(items);
   return (
     <>
       <AddItem
