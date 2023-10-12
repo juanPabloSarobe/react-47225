@@ -1,25 +1,29 @@
-import axios from "axios";
+// import axios from "axios";
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
+import { productsMockup } from "../../../../productsMockup";
 
 const ItemDetailContainer = (newId) => {
   const [item, setItem] = useState([]);
-  const [id, setid] = useState(1);
-
-  const changeId = () => {
-    const { item } = newId;
-    setid(item);
-  };
+  const id = 1;
 
   useEffect(() => {
-    changeId();
-    const tarea = axios.get(`http://localhost:5000/products/${id}`);
-    tarea.then((resp) => {
-      setItem(resp.data);
+    const producto = productsMockup.find((prod) => prod.id === id);
+
+    const getProduct = new Promise((resolve, reject) => {
+      resolve(producto);
+    });
+    getProduct.then((resp) => {
+      setItem(resp);
     });
   }, [id]);
 
-  return <ItemDetail item={item} />;
+  const onAdd = (cantidad) => {
+    const addCart = { ...item, cantidad };
+    console.log("se agrego al carrito: ", addCart);
+  };
+
+  return <ItemDetail item={item} onAdd={onAdd} />;
 };
 
 export default ItemDetailContainer;

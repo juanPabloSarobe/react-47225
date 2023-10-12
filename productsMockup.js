@@ -3,7 +3,7 @@ export const productsMockup = [
     id: 1,
     title: "Cerveza IPA",
     price: 5.99,
-    stock: 51,
+    stock: 4,
     description: "Cerveza India Pale Ale, ligeramente amarga y aromática.",
     category: "Cervezas",
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104302/descarga_schjmg.jpg",

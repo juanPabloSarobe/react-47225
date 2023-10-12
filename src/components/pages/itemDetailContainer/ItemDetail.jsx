@@ -5,18 +5,23 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import SendIcon from "@mui/icons-material/Send";
-import { Container, sizing } from "@mui/system";
-import { Button } from "@mui/material";
+import { Container } from "@mui/system";
 import AddItemsContainer from "../../common/addItems/AddItemsContainer";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, onAdd }) => {
+  console.log(item);
   return (
     <Container
       id="test"
-      maxWidth="75vw"
-      width="75%"
-      sx={{ mt: { xs: 10, md: 20 } }}
+      maxWidth="50vw"
+      //width="50vw"
+      sx={{
+        mt: { xs: 10, md: 20 },
+        whidth: "70%",
+        minWidth: "200px",
+        display: "flex",
+        justifyContent: "center",
+      }}
     >
       <Card
         sx={{
@@ -24,12 +29,17 @@ const ItemDetail = ({ item }) => {
           flexDirection: { xs: "column", md: "row" },
           borderRadius: 8,
           pt: 2,
+          whidth: "100%",
+          maxWidth: "70vw",
+          alignItems: "center",
         }}
       >
         <CardMedia
           component="img"
           sx={{
-            width: { xs: 1, md: 1 / 2 },
+            display: "flex",
+
+            width: { xs: 2 / 3, md: 1 / 2 },
             maxHeight: { xs: 280, md: 525 },
           }}
           image={item.img}
@@ -39,7 +49,7 @@ const ItemDetail = ({ item }) => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            width: { xs: 1, md: 1 / 2 },
+            width: { xs: 1, md: "70%" },
           }}
         >
           <CardContent sx={{ flex: "1 0 auto" }}>
@@ -56,21 +66,15 @@ const ItemDetail = ({ item }) => {
                 justifyContent: "space-between",
                 alignItems: "center",
                 m: 5,
+                width: "100%",
               }}
             >
-              <Typography component="div" variant="h4">
-                Cantidad
-              </Typography>
               <Box>
-                <AddItemsContainer item={item} />
+                <AddItemsContainer item={item} onAdd={onAdd} />
               </Box>
             </Box>
           </CardContent>
-          <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-            <Button variant="contained" endIcon={<SendIcon />}>
-              Send
-            </Button>
-          </Box>
+          {/* // Aca va el boton */}
         </Box>
       </Card>
     </Container>

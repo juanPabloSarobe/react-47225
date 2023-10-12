@@ -5,15 +5,9 @@ import {
   CardContent,
   CardActions,
   Button,
-  Modal,
 } from "@mui/material";
-import ModalItem from "../../pages/itemDetailContainer/ModalItem";
-import * as React from "react";
 
 const ProductCard = ({ item }) => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
   return (
     <>
       <Card
@@ -49,10 +43,9 @@ const ProductCard = ({ item }) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" variant="outlined" onClick={handleOpen}>
+          <Button size="small" variant="outlined">
             Mas detalles
           </Button>
-          <ModalItem open={open} handleClose={() => handleClose} item={item} />
         </CardActions>
       </Card>
     </>

@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import AddItem from "./AddItem";
 
-const AddItemsContainer = ({ item }) => {
+const AddItemsContainer = ({ item, onAdd }) => {
   const [stock, setStock] = useState(4);
-  const [items, setItems] = useState(1);
+  const [contador, setContador] = useState(1);
 
   const addItems = () => {
-    if (items < stock) {
-      setItems(items + 1);
+    if (contador < stock) {
+      setContador(contador + 1);
     }
   };
   const removeItems = () => {
-    if (items > 1) {
-      setItems(items - 1);
+    if (contador > 1) {
+      setContador(contador - 1);
     }
   };
   useEffect(() => {
@@ -24,7 +24,8 @@ const AddItemsContainer = ({ item }) => {
       <AddItem
         addItems={() => addItems}
         removeItems={() => removeItems}
-        items={items}
+        contador={contador}
+        onAdd={onAdd}
       />
     </>
   );
