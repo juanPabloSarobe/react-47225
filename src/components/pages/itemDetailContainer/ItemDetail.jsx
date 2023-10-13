@@ -9,7 +9,6 @@ import { Container } from "@mui/system";
 import AddItemsContainer from "../../common/addItems/AddItemsContainer";
 
 const ItemDetail = ({ item, onAdd }) => {
-  console.log(item);
   return (
     <Container
       id="test"
@@ -65,7 +64,7 @@ const ItemDetail = ({ item, onAdd }) => {
                 flexDirection: { xs: "column", sm: "row" },
                 justifyContent: "space-between",
                 alignItems: "center",
-                m: 5,
+                m: 1,
                 width: "100%",
               }}
             >

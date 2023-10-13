@@ -1,7 +1,8 @@
 import * as React from "react";
 import AppBarReturn from "./AppBarReturn";
 
-const pages = ["Products", "Pricing", "Blog"];
+/* const pages = ["Products", "Pricing", "Blog"]; */
+const pages = [];
 const settings = ["Profile", "Account", "Logout"];
 
 const AppBarContainer = () => {
