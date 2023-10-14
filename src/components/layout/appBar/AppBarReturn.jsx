@@ -12,9 +12,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import logo from "../../../assets/img/liquidStoreLogo.png";
-import { Link, Outlet } from "react-router-dom";
-import AppBarSpace from "./AppBarSpace";
-import FilterSectionContainer from "../../common/filterSection/FilterSectionContainer";
+import { Link } from "react-router-dom";
 
 const AppBarReturn = ({
   handleOpenNavMenu,
@@ -159,7 +157,12 @@ const AppBarReturn = ({
               >
                 {settings.map((setting) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
+                    <Link
+                      to={"/Error404"}
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
+                      <Typography textAlign="center">{setting}</Typography>
+                    </Link>
                   </MenuItem>
                 ))}
               </Menu>
@@ -167,9 +170,6 @@ const AppBarReturn = ({
           </Toolbar>
         </Container>
       </AppBar>
-      <AppBarSpace />
-      <FilterSectionContainer />
-      <Outlet />
     </>
   );
 };

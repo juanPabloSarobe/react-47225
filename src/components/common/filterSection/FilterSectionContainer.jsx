@@ -9,7 +9,7 @@ const FilterSectionContainer = () => {
     {
       id: "Todos",
       category: "Todos",
-      img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104302/descarga_schjmg.jpg",
+      img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1697320248/liquidStoreLogo_vrdfph.png",
     },
   ]);
   useEffect(() => {

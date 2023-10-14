@@ -4,7 +4,11 @@ import ProductCard from "../../common/productCard/ProductCard";
 const ItemList = ({ items }) => {
   return (
     <>
-      <Container maxWidth="xl" mt={1}>
+      <Container
+        maxWidth="xl"
+        mt={1}
+        sx={{ height: "100vh", overflow: "scroll" }}
+      >
         <Typography variant="h2" mt={5} mb={2} align="center">
           Nuestros productos
         </Typography>
