@@ -4,8 +4,8 @@ import ProductCard from "../../common/productCard/ProductCard";
 const ItemList = ({ items }) => {
   return (
     <>
-      <Container maxWidth="xl">
-        <Typography variant="h2" mt={10} mb={2} align="center">
+      <Container maxWidth="xl" mt={1}>
+        <Typography variant="h2" mt={5} mb={2} align="center">
           Nuestros productos
         </Typography>
         <Stack

@@ -2,13 +2,14 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import { productsMockup } from "../../../../productsMockup";
+import { useParams } from "react-router-dom";
 
-const ItemDetailContainer = (newId) => {
+const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
-  const id = 1;
+  const { id } = useParams();
 
   useEffect(() => {
-    const producto = productsMockup.find((prod) => prod.id === id);
+    const producto = productsMockup.find((prod) => prod.id === +id);
 
     const getProduct = new Promise((resolve, reject) => {
       resolve(producto);

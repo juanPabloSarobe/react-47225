@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import { useEffect } from "react";
-import FilterCard from "../productCard/FilterCard";
+
+import FilterCard from "../filterCard/FilterCard";
 
 const FilterSection = ({ catFinal }) => {
   return (
