@@ -15,26 +15,34 @@ const AddItem = ({ addItems, removeItems, contador, onAdd }) => {
     >
       <Box
         id="box1"
-        sx={{ display: "flex", alignItems: "center", width: "100%" }}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          width: "100%",
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
       >
-        <Typography component="div" variant="h5">
+        <Typography component="div" variant="h6">
           Cantidad
         </Typography>
         <Box
           sx={{
             display: "flex",
-            m: 2,
+            m: 1,
+            mr: 0,
             gap: 2,
             border: 0.5,
             borderRadius: 5,
             borderColor: "grey.400",
+            alignItems: "center",
           }}
         >
           <IconButton aria-label="minus" onClick={removeItems()}>
             <RemoveIcon fontSize="inherit" />
           </IconButton>
 
-          <Typography component="div" variant="h4">
+          <Typography component="div" variant="h5">
             {contador}
           </Typography>
           <IconButton aria-label="minus" onClick={addItems()}>
@@ -42,7 +50,7 @@ const AddItem = ({ addItems, removeItems, contador, onAdd }) => {
           </IconButton>
         </Box>
       </Box>
-      <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
+      <Box sx={{ display: "flex", alignItems: "center", pb: 1 }}>
         <Button
           variant="contained"
           endIcon={<SendIcon />}

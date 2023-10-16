@@ -4,12 +4,8 @@ import ProductCard from "../../common/productCard/ProductCard";
 const ItemList = ({ items, categoryName }) => {
   return (
     <>
-      <Container
-        maxWidth="xl"
-        mt={1}
-        sx={{ height: "100vh", overflow: "scroll" }}
-      >
-        <Typography variant="h2" mt={5} mb={2} align="center">
+      <Container maxWidth="xl" mt={1} mb={20} sx={{ overflow: "scroll" }}>
+        <Typography variant="h2" mt={3} mb={2} align="center">
           {categoryName ? `${categoryName} ` : " Nuestros productos"}
         </Typography>
         <Stack
@@ -18,6 +14,7 @@ const ItemList = ({ items, categoryName }) => {
           spacing={{ xs: 1, sm: 2, md: 4 }}
           justifyContent={{ xs: "center" }}
           gap={2}
+          mb={2}
         >
           {items.map((item) => {
             return <ProductCard item={item} key={item.id} />;

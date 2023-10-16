@@ -12,11 +12,9 @@ const ItemDetail = ({ item, onAdd }) => {
   return (
     <Container
       id="test"
-      maxWidth="50vw"
-      //width="50vw"
       sx={{
-        mt: { xs: 10, md: 20 },
-        whidth: "70%",
+        my: { xs: 2, md: 4 },
+
         minWidth: "200px",
         display: "flex",
         justifyContent: "center",
@@ -28,8 +26,9 @@ const ItemDetail = ({ item, onAdd }) => {
           flexDirection: { xs: "column", md: "row" },
           borderRadius: 8,
           pt: 2,
-          whidth: "100%",
+          width: "100%",
           maxWidth: "70vw",
+          maxHeight: { xs: "50%", md: "40vh" },
           alignItems: "center",
         }}
       >
@@ -37,9 +36,9 @@ const ItemDetail = ({ item, onAdd }) => {
           component="img"
           sx={{
             display: "flex",
-
+            objectFit: { xs: "contain", md: "cover" },
             width: { xs: 2 / 3, md: 1 / 2 },
-            maxHeight: { xs: 280, md: 525 },
+            maxHeight: { xs: "40%", md: "100%" },
           }}
           image={item.img}
           alt={item.title}
@@ -51,11 +50,17 @@ const ItemDetail = ({ item, onAdd }) => {
             width: { xs: 1, md: "70%" },
           }}
         >
-          <CardContent sx={{ flex: "1 0 auto" }}>
-            <Typography component="div" variant="h3">
+          <CardContent
+            sx={{
+              flex: "1 0 auto",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Typography component="div" variant="h5">
               {item.title}
             </Typography>
-            <Typography variant="h5" color="text.secondary" component="div">
+            <Typography variant="h7" color="text.secondary" component="div">
               {item.description}
             </Typography>
             <Box
