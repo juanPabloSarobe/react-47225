@@ -1,7 +1,7 @@
 import { Typography, Stack, Container } from "@mui/material";
 import ProductCard from "../../common/productCard/ProductCard";
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, categoryName }) => {
   return (
     <>
       <Container
@@ -10,7 +10,7 @@ const ItemList = ({ items }) => {
         sx={{ height: "100vh", overflow: "scroll" }}
       >
         <Typography variant="h2" mt={5} mb={2} align="center">
-          Nuestros productos
+          {categoryName ? `${categoryName} ` : " Nuestros productos"}
         </Typography>
         <Stack
           direction={{ xs: "row" }}

@@ -26,7 +26,10 @@ const AppBarReturn = ({
 }) => {
   return (
     <>
-      <AppBar position="fixed" sx={{ backgroundColor: "white" }}>
+      <AppBar
+        position="fixed"
+        sx={{ backgroundColor: "white", zIndex: "1050" }}
+      >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Typography

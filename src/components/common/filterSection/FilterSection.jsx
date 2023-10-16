@@ -6,7 +6,7 @@ const FilterSection = ({ catFinal }) => {
   return (
     <Box
       sx={{
-        height: "200px",
+        height: { xs: "12vh", md: "22vh" },
         backgroundColor: "grey",
         display: "flex",
         direction: "row",
