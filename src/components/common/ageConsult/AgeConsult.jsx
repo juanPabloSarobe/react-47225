@@ -31,12 +31,14 @@ const AgeConsult = () => {
         allowOutsideClick: false,
         allowEscapeKey: false,
       }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
           setAge(true);
-          Swal.fire("Bienvenido, ya puedes comprar", "", "success").then(() =>
-            goTo("/")
-          );
+          Swal.fire({
+            title: "Bienvenido, ya puedes comprar",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 1000,
+          }).then(() => goTo("/"));
         } else {
           Swal.fire({
             title: "Lo sentimos debes ser mayor de edad para poder comprar",
