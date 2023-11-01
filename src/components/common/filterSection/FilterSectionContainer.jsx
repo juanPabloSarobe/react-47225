@@ -22,7 +22,7 @@ const FilterSectionContainer = () => {
           img: elem.img,
         };
 
-        return setCategorias(categorias.push(nuevaCat));
+        return setCategorias([...categorias, nuevaCat]);
       }
     });
 
@@ -33,7 +33,7 @@ const FilterSectionContainer = () => {
     tarea.then((res) => {
       setCatFinal(res);
     });
-  }, []);
+  }, [categorias]);
 
   return <FilterSection catFinal={catFinal} />;
 };

@@ -1,19 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AgeConsult = () => {
   const goTo = useNavigate();
 
-  const [age, setAge] = useState(false);
+  const [age, setAge] = useState(
+    JSON.parse(localStorage.getItem("mayorEdad")) || false
+  );
 
-  useEffect(() => {
-    localStorage.setItem("mayorEdad", age);
-  }, [age]);
-
-  if (localStorage.getItem("mayorEdad") === null) {
-    localStorage.setItem("mayorEdad", age);
-  }
   if (!age) {
     setTimeout(() => {
       Swal.fire({
@@ -33,6 +28,7 @@ const AgeConsult = () => {
       }).then((result) => {
         if (result.isConfirmed) {
           setAge(true);
+          localStorage.setItem("mayorEdad", JSON.stringify(true));
           Swal.fire({
             title: "Bienvenido, ya puedes comprar",
             icon: "success",
