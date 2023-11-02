@@ -1,8 +1,16 @@
 import { useFormik, yupToFormErrors } from "formik";
-import { Box, Button, Paper, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Paper,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
 import * as Yup from "yup";
 import { ChevronLeft } from "@mui/icons-material";
 import Cart from "../cart/Cart";
+import BasicAccordion from "../../common/basicAccordion/BasicAccordion";
 
 const CheckoutFormikContainer = () => {
   const { handleSubmit, handleChange, errors } = useFormik({
@@ -57,8 +65,10 @@ const CheckoutFormikContainer = () => {
   });
   return (
     <Paper
-      elevation={4}
+      elevation={12}
       sx={{
+        m: "20px",
+        p: 1,
         display: "flex",
         flexDirection: { xs: "column-reverse", md: "row" },
         justifyContent: "center",
@@ -68,14 +78,41 @@ const CheckoutFormikContainer = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
-          width: { xs: "90vw", md: "45vw" },
-          /* backgroundColor: "brown", */
+          flexDirection: "column",
+          width: { xs: "90vw", md: "75vw" },
+          borderRadius: "5px",
+          backgroundColor: "#374151",
+          py: 2,
+          px: 1,
         }}
       >
-        <Typography>Datos de envío y pago</Typography>
-        <Typography>Complete sus Datos</Typography>
-        <form onSubmit={handleSubmit}>
+        <Typography
+          variant="h6"
+          pb={1}
+          pr={1}
+          color={"#f9f9f8"}
+          fontWeight={"Bold"}
+        >
+          Datos de envío y pago
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          pb={1}
+          pr={1}
+          color={"#f9f9f8"}
+          fontWeight={"Bold"}
+        >
+          Complete sus Datos
+        </Typography>
+        <Stack
+          component={"form"}
+          onSubmit={handleSubmit}
+          spacing={1}
+          useFlexGap
+          flexWrap="wrap"
+          direction="row"
+          sx={{ backgroundColor: "#374151" }}
+        >
           <TextField
             name="email"
             id="email"
@@ -84,24 +121,11 @@ const CheckoutFormikContainer = () => {
             onChange={handleChange}
             error={errors.email ? true : false}
             helperText={errors.email}
-          />
-          <TextField
-            name="nombre"
-            id="nombre"
-            label="Nombre"
-            variant="outlined"
-            onChange={handleChange}
-            error={errors.nombre ? true : false}
-            helperText={errors.nombre}
-          />
-          <TextField
-            name="apellido"
-            id="apellido"
-            label="Apellido"
-            variant="outlined"
-            onChange={handleChange}
-            error={errors.apellido ? true : false}
-            helperText={errors.apellido}
+            sx={{
+              width: { xs: "100%", sm: "69%" },
+              backgroundColor: "#f9f9f8",
+              borderRadius: "5px",
+            }}
           />
           <TextField
             name="edad"
@@ -112,6 +136,39 @@ const CheckoutFormikContainer = () => {
             onChange={handleChange}
             error={errors.edad ? true : false}
             helperText={errors.edad}
+            sx={{
+              width: { xs: "100%", sm: "29%" },
+              backgroundColor: "#f9f9f8",
+              borderRadius: "5px",
+            }}
+          />
+          <TextField
+            name="nombre"
+            id="nombre"
+            label="Nombre"
+            variant="outlined"
+            onChange={handleChange}
+            error={errors.nombre ? true : false}
+            helperText={errors.nombre}
+            sx={{
+              width: { xs: "100%", sm: "49%" },
+              backgroundColor: "#f9f9f8",
+              borderRadius: "5px",
+            }}
+          />
+          <TextField
+            name="apellido"
+            id="apellido"
+            label="Apellido"
+            variant="outlined"
+            onChange={handleChange}
+            error={errors.apellido ? true : false}
+            helperText={errors.apellido}
+            sx={{
+              width: { xs: "100%", sm: "49%" },
+              backgroundColor: "#f9f9f8",
+              borderRadius: "5px",
+            }}
           />
           <TextField
             name="provincia"
@@ -121,6 +178,11 @@ const CheckoutFormikContainer = () => {
             onChange={handleChange}
             error={errors.provincia ? true : false}
             helperText={errors.provincia}
+            sx={{
+              width: { xs: "100%", sm: "49%" },
+              backgroundColor: "#f9f9f8",
+              borderRadius: "5px",
+            }}
           />
           <TextField
             name="localidad"
@@ -130,6 +192,11 @@ const CheckoutFormikContainer = () => {
             onChange={handleChange}
             error={errors.localidad ? true : false}
             helperText={errors.localidad}
+            sx={{
+              width: { xs: "100%", sm: "49%" },
+              backgroundColor: "#f9f9f8",
+              borderRadius: "5px",
+            }}
           />
           <TextField
             name="direccion"
@@ -139,14 +206,16 @@ const CheckoutFormikContainer = () => {
             onChange={handleChange}
             error={errors.direccion ? true : false}
             helperText={errors.direccion}
+            sx={{
+              width: { xs: "100%", sm: "100%" },
+              backgroundColor: "#f9f9f8",
+              borderRadius: "5px",
+            }}
           />
-          <Button variant="contained" type="submit">
-            Pagar
-          </Button>
-          <Button variant="contained" type="button">
-            seguir comprando
-          </Button>
-        </form>
+          <Stack direction="row" spacing={2}>
+            <BasicAccordion />
+          </Stack>
+        </Stack>
       </Box>
       <Box
         sx={{

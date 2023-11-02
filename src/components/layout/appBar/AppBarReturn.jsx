@@ -32,10 +32,10 @@ const AppBarReturn = ({
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Typography
-              variant="h6"
+            <Box
+              /*  variant="h6"
               noWrap
-              component="a"
+              component="a" */
               /* href="#app-bar-with-responsive-menu" */
               sx={{
                 mr: 2,
@@ -50,7 +50,7 @@ const AppBarReturn = ({
               <Link to={"/"}>
                 <img src={logo} style={{ width: "150px" }} />
               </Link>
-            </Typography>
+            </Box>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -89,10 +89,10 @@ const AppBarReturn = ({
               </Menu>
             </Box>
 
-            <Typography
-              variant="h5"
+            <Box
+              /* variant="h5"
               noWrap
-              component="a"
+              component="a" */
               sx={{
                 mr: 2,
                 display: { xs: "flex", md: "none" },
@@ -107,7 +107,7 @@ const AppBarReturn = ({
               <Link to={"/"}>
                 <img src={logo} style={{ width: "150px" }} />
               </Link>
-            </Typography>
+            </Box>
 
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
