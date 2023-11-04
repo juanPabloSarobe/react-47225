@@ -13,6 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import logo from "../../../assets/img/liquidStoreLogo.png";
 import { Link } from "react-router-dom";
+import CartWidget from "../../common/cartWidget/CartWidget";
 
 const AppBarReturn = ({
   handleOpenNavMenu,
@@ -33,10 +34,6 @@ const AppBarReturn = ({
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box
-              /*  variant="h6"
-              noWrap
-              component="a" */
-              /* href="#app-bar-with-responsive-menu" */
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -90,9 +87,6 @@ const AppBarReturn = ({
             </Box>
 
             <Box
-              /* variant="h5"
-              noWrap
-              component="a" */
               sx={{
                 mr: 2,
                 display: { xs: "flex", md: "none" },
@@ -129,11 +123,7 @@ const AppBarReturn = ({
                     size="large"
                     sx={{ p: 0, mr: 1 }}
                   >
-                    <ShoppingCartOutlinedIcon
-                      alt="Cart"
-                      src=""
-                      fontSize="inherit"
-                    />
+                    <CartWidget />
                   </IconButton>
                 </Tooltip>
               </Link>
