@@ -4,8 +4,10 @@ import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 
 const CartTotal = () => {
-  const { totalPrice } = useContext(CartContext);
+  const { cart, totalPrice } = useContext(CartContext);
   const total = totalPrice();
+  const emptyCart = cart.length === 0 && { display: "none" };
+
   return (
     <>
       <Stack
@@ -21,6 +23,7 @@ const CartTotal = () => {
           m: 1,
           width: { xs: "100%", md: "100%" },
           maxWidth: { xs: "100%", md: "500px" },
+          ...emptyCart,
         }}
       >
         <Typography variant="h4">Total</Typography>

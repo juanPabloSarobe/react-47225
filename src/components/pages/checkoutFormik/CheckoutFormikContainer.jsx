@@ -4,8 +4,14 @@ import * as Yup from "yup";
 import Cart from "../cart/Cart";
 import BasicAccordion from "../../common/basicAccordion/BasicAccordion";
 import CartTotal from "../cart/CartTotal";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
+import Swal from "sweetalert2";
 
 const CheckoutFormikContainer = () => {
+  const goTo = useNavigate();
+  const { cartBuyed } = useContext(CartContext);
   const { handleSubmit, handleChange, errors } = useFormik({
     initialValues: {
       nombre: "",
@@ -17,7 +23,13 @@ const CheckoutFormikContainer = () => {
       edad: "",
     },
     onSubmit: (data) => {
-      console.log(data);
+      Swal.fire({
+        title: "Gracias por su compra",
+        text: "En breve seras redirigido a la pasarela de pago correspondiente.",
+      }).then(() => {
+        cartBuyed();
+        goTo("/");
+      });
     },
     validateOnChange: false,
     validationSchema: Yup.object({
@@ -210,6 +222,7 @@ const CheckoutFormikContainer = () => {
           </Stack>
         </Stack>
       </Box>
+
       <Box
         sx={{
           display: "flex",
