@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { productsMockup } from "../../../../productsMockup";
 import ItemList from "./ItemList";
 import ItemListSkeleton from "./ItemListSkeleton";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../../firebaseConfig";
 
 const ItemListContainer = () => {
   const { categoryName } = useParams();
@@ -10,18 +11,21 @@ const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const productosFiltrados = productsMockup.filter(
-      (product) => product.category === categoryName
-    );
-
-    const tarea = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(categoryName ? productosFiltrados : productsMockup);
-      }, 1000);
-    });
-
-    tarea.then((res) => {
-      setItems(res);
+    let productsColection = collection(db, "productsMockup");
+    let consulta;
+    if (!categoryName) {
+      consulta = productsColection;
+    } else {
+      consulta = query(
+        productsColection,
+        where("category", "==", categoryName)
+      );
+    }
+    getDocs(consulta).then((resp) => {
+      let newArray = resp.docs.map((prod) => {
+        return { id: prod.id, ...prod.data() };
+      });
+      setItems(newArray);
     });
   }, [categoryName]);
 

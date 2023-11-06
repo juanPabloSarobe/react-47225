@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
-import { productsMockup } from "../../../../productsMockup";
+
 import FilterSection from "./FilterSection";
+import { getDocs, collection } from "firebase/firestore";
+import { db } from "../../../firebaseConfig";
 
 const FilterSectionContainer = () => {
   const [catFinal, setCatFinal] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const [categorias, setCategorias] = useState([
     {
@@ -14,7 +17,15 @@ const FilterSectionContainer = () => {
   ]);
   useEffect(() => {
     //console.log(categorias);
-    productsMockup.map((elem) => {
+    let productsColection = collection(db, "productsMockup");
+    getDocs(productsColection).then((res) => {
+      let newArray = res.docs.map((prod) => {
+        return { id: prod.id, ...prod.data() };
+      });
+      setProducts(newArray);
+    });
+    //---------------------------------------------------------------
+    products.map((elem) => {
       if (!categorias.some((cat) => cat.category === elem.category)) {
         const nuevaCat = {
           id: elem.category,
@@ -33,7 +44,7 @@ const FilterSectionContainer = () => {
     tarea.then((res) => {
       setCatFinal(res);
     });
-  }, [categorias]);
+  }, [categorias, products]);
 
   return <FilterSection catFinal={catFinal} />;
 };

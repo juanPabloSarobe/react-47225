@@ -1,22 +1,21 @@
 // import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
-import { productsMockup } from "../../../../productsMockup";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
-
+import { db } from "../../../firebaseConfig";
+import { getDoc, collection, doc } from "firebase/firestore";
 const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
   const { id } = useParams();
   const { addToCart } = useContext(CartContext);
-  useEffect(() => {
-    const producto = productsMockup.find((prod) => prod.id === +id);
 
-    const getProduct = new Promise((resolve, reject) => {
-      resolve(producto);
-    });
-    getProduct.then((resp) => {
-      setItem(resp);
+  useEffect(() => {
+    let itemCollection = collection(db, "productsMockup");
+    let refDoc = doc(itemCollection, id);
+
+    getDoc(refDoc).then((res) => {
+      setItem({ id: res.id, ...res.data() });
     });
   }, [id]);
 
