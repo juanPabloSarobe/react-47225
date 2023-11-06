@@ -5,7 +5,7 @@ import { CartContext } from "../../../context/CartContext";
 
 const CartWidget = () => {
   const { totalItems } = useContext(CartContext);
-
+  const total = totalItems();
   return (
     <div>
       <ShoppingCartOutlinedIcon
@@ -13,7 +13,7 @@ const CartWidget = () => {
         src=""
         fontSize="inherit"
       ></ShoppingCartOutlinedIcon>
-      <Badge badgeContent={0} color="warning"></Badge>
+      <Badge badgeContent={total} color="warning"></Badge>
     </div>
   );
 };

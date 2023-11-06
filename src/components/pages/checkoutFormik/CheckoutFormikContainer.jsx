@@ -1,16 +1,9 @@
-import { useFormik, yupToFormErrors } from "formik";
-import {
-  Box,
-  Button,
-  Paper,
-  Stack,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { useFormik } from "formik";
+import { Box, Paper, Stack, TextField, Typography } from "@mui/material";
 import * as Yup from "yup";
-import { ChevronLeft } from "@mui/icons-material";
 import Cart from "../cart/Cart";
 import BasicAccordion from "../../common/basicAccordion/BasicAccordion";
+import CartTotal from "../cart/CartTotal";
 
 const CheckoutFormikContainer = () => {
   const { handleSubmit, handleChange, errors } = useFormik({
@@ -72,7 +65,7 @@ const CheckoutFormikContainer = () => {
         display: "flex",
         flexDirection: { xs: "column-reverse", md: "row" },
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "start",
       }}
     >
       <Box
@@ -220,12 +213,12 @@ const CheckoutFormikContainer = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
           width: { xs: "90vw", md: "45vw" },
-          /* backgroundColor: "grey", */
         }}
       >
         <Cart />
+        <CartTotal />
       </Box>
     </Paper>
   );
