@@ -16,30 +16,31 @@ const Footer = () => {
           <Grid container spacing={5}>
             <Grid item xs={12} sm={4}>
               <Typography variant="h6" color="white" gutterBottom>
-                About Us
+                Sobre mi
               </Typography>
               <Typography variant="body2" color="white">
-                We are XYZ company, dedicated to providing the best service to
-                our customers.
+                Juan Pablo Sarobe, Lic en administración, programador FrontEnd.
+                LiquidStore es un proyecto para el curso de React en Coderhouse.
+                Comisión 47225
               </Typography>
             </Grid>
             <Grid item xs={12} sm={4}>
               <Typography variant="h6" color="white" gutterBottom>
-                Contact Us
+                Contactame
               </Typography>
               <Typography variant="body2" color="white">
-                123 Main Street, Anytown, USA
+                Neuquén Capital, Argentina
               </Typography>
               <Typography variant="body2" color="white">
-                Email: info@example.com
+                Email: jp.sarobe@gmail.com
               </Typography>
               <Typography variant="body2" color="white">
-                Phone: +1 234 567 8901
+                Tel: +5492996911111
               </Typography>
             </Grid>
             <Grid item xs={12} sm={4}>
               <Typography variant="h6" color="white" gutterBottom>
-                Follow Us
+                Seguime
               </Typography>
               <Link href="https://www.facebook.com/" color="inherit">
                 <Facebook />
@@ -60,7 +61,7 @@ const Footer = () => {
             <Typography variant="body2" color="white" align="center">
               {"Copyright © "}
               <Link color="inherit" href="https://your-website.com/">
-                Your Website
+                LiquidStore
               </Link>{" "}
               {new Date().getFullYear()}
               {"."}
