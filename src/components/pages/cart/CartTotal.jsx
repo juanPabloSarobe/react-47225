@@ -22,7 +22,7 @@ const CartTotal = () => {
           p: 2,
           m: 1,
           width: { xs: "100%", md: "100%" },
-          maxWidth: { xs: "100%", md: "500px" },
+          maxWidth: { xs: "90%", md: "500px" },
           ...emptyCart,
         }}
       >

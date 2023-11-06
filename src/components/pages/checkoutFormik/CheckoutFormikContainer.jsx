@@ -84,7 +84,7 @@ const CheckoutFormikContainer = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          width: { xs: "90vw", md: "75vw" },
+          width: { xs: "85vw", md: "75vw" },
           borderRadius: "5px",
           backgroundColor: "#374151",
           py: 2,
