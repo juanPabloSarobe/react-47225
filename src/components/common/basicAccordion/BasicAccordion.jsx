@@ -7,7 +7,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import PayButton from "../payButton/PayButton";
 import { useState } from "react";
 
-export default function BasicAccordion() {
+export default function BasicAccordion({ comprado }) {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -42,7 +42,7 @@ export default function BasicAccordion() {
             Al aceptar la compra seras redirigido a la pasarela de pagos de
             tarjetas de credito y debito.
           </Typography>
-          <PayButton />
+          <PayButton comprado={comprado} />
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -73,7 +73,7 @@ export default function BasicAccordion() {
             <strong> Mercado Pago </strong>
             serás redirigido y podrás pagar de las siguientes formas:
           </Typography>
-          <PayButton />
+          <PayButton comprado={comprado} />
         </AccordionDetails>
       </Accordion>
     </div>

@@ -1,18 +1,24 @@
-import { Button } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 import { Box } from "@mui/system";
-import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
-import { CartContext } from "../../../context/CartContext";
 
-const PayButton = () => {
+const PayButton = ({ comprado }) => {
   return (
     <Box width={9 / 10} sx={{ display: "flex", justifyContent: "center" }}>
       <Button
         sx={{ width: "100%" }}
         variant="contained"
-        type="submit"
+        type={"submit"}
         color="success"
+        disabled={comprado}
+        endIcon={
+          comprado && (
+            <CircularProgress
+              sx={{
+                color: " white",
+              }}
+            />
+          )
+        }
       >
         Pagar
       </Button>
@@ -21,3 +27,16 @@ const PayButton = () => {
 };
 
 export default PayButton;
+
+{
+  /* <CircularProgress
+  size={68}
+  sx={{
+    color: green[500],
+    position: "absolute",
+    top: -6,
+    left: -6,
+    zIndex: 1,
+  }}
+/>; */
+}

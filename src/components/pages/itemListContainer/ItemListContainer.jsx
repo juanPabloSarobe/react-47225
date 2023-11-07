@@ -4,7 +4,6 @@ import ItemList from "./ItemList";
 import ItemListSkeleton from "./ItemListSkeleton";
 import { getDocs, collection, query, where, addDoc } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
-import { productsMockup } from "../../../../productsMockup";
 
 const ItemListContainer = () => {
   const { categoryName } = useParams();
@@ -12,17 +11,18 @@ const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   //se deja la funcion para tenerla de referencia
-  const rellenarDB = () => {
+  /* const rellenarDB = () => {
     const prodCollection = collection(db, "productsMockup");
 
     productsMockup.forEach((elemento) => {
       addDoc(prodCollection, elemento);
     });
-  };
+  }; */
 
   useEffect(() => {
     let productsColection = collection(db, "productsMockup");
     let consulta;
+    debugger;
     if (!categoryName) {
       consulta = productsColection;
     } else {

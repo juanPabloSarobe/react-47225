@@ -1,5 +1,14 @@
 export const productsMockup = [
   {
+    title: "Vino Tinto Reserva",
+    price: 12.99,
+    stock: 30,
+    stock: 0,
+    description: "Vino tinto reserva de alta calidad, cosecha 2015.",
+    category: "Vinos",
+    img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104434/CeYiCOGWSUuyzWD_JuDsOg_ytj20a.jpg",
+  },
+  {
     title: "Whisky Escocés",
     price: 29.99,
     stock: 20,
