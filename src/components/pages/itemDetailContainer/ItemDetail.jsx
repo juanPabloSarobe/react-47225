@@ -7,6 +7,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Container } from "@mui/system";
 import AddItemsContainer from "../../common/addItems/AddItemsContainer";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const ItemDetail = ({ item, onAdd }) => {
   return (
@@ -58,10 +60,10 @@ const ItemDetail = ({ item, onAdd }) => {
             }}
           >
             <Typography component="div" variant="h5">
-              {item.title}
+              {item.title || "Item no encontrado"}
             </Typography>
             <Typography variant="h7" color="text.secondary" component="div">
-              {item.description}
+              {item.description || ""}
             </Typography>
             <Box
               sx={{
@@ -74,11 +76,16 @@ const ItemDetail = ({ item, onAdd }) => {
               }}
             >
               <Box>
-                <AddItemsContainer item={item} onAdd={onAdd} />
+                {item.title ? (
+                  <AddItemsContainer item={item} onAdd={onAdd} />
+                ) : (
+                  <Link to={"/"}>
+                    <Button variant="contained"> Volver</Button>
+                  </Link>
+                )}
               </Box>
             </Box>
           </CardContent>
-          {/* // Aca va el boton */}
         </Box>
       </Card>
     </Container>

@@ -4,7 +4,9 @@ import Swal from "sweetalert2";
 export const CartContext = createContext();
 
 const CartContextComponent = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) || []
+  );
 
   const addToCart = (product) => {
     !isInCart(product.id)
@@ -26,7 +28,9 @@ const CartContextComponent = ({ children }) => {
       timer: 2000,
       timerProgressBar: true,
     });
-    setCart([...cart, product]);
+    const newCart = [...cart, product];
+    setCart(newCart);
+    localStorage.setItem("cart", JSON.stringify(newCart));
   };
 
   const removeOneToItem = (product) => {
@@ -53,6 +57,7 @@ const CartContextComponent = ({ children }) => {
         return e;
       }
     });
+    localStorage.setItem("cart", JSON.stringify(newCart));
     return setCart(newCart);
   };
 
@@ -89,7 +94,7 @@ const CartContextComponent = ({ children }) => {
         return e;
       }
     });
-
+    localStorage.setItem("cart", JSON.stringify(newCart));
     return setCart(newCart);
   };
 
@@ -126,6 +131,7 @@ const CartContextComponent = ({ children }) => {
         return e;
       }
     });
+    localStorage.setItem("cart", JSON.stringify(newCart));
     return newCart;
   };
 
@@ -151,12 +157,14 @@ const CartContextComponent = ({ children }) => {
           timerProgressBar: true,
         });
         setCart([]);
+        localStorage.removeItem("cart");
       }
     });
   };
 
   const cartBuyed = () => {
     setCart([]);
+    localStorage.removeItem("cart");
   };
   const totalItems = () => {
     const itemsTotales = cart.reduce((acc, val) => {
@@ -197,6 +205,7 @@ const CartContextComponent = ({ children }) => {
           return e.id !== product.id;
         });
 
+        localStorage.setItem("cart", JSON.stringify(newCart));
         return setCart(newCart);
       }
     });

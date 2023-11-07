@@ -16,12 +16,11 @@ const Footer = () => {
           <Grid container spacing={5}>
             <Grid item xs={12} sm={4}>
               <Typography variant="h6" color="white" gutterBottom>
-                Sobre mi
+                Juan Pablo Sarobe
               </Typography>
               <Typography variant="body2" color="white">
-                Juan Pablo Sarobe, Lic en administración, programador FrontEnd.
-                LiquidStore es un proyecto para el curso de React en Coderhouse.
-                Comisión 47225
+                Lic en administración, programador FrontEnd. LiquidStore es un
+                proyecto para el curso de React en Coderhouse. Comisión 47225
               </Typography>
             </Grid>
             <Grid item xs={12} sm={4}>

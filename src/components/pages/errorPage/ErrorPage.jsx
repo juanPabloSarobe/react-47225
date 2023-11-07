@@ -1,7 +1,10 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const ErrorPage = () => {
+const ErrorPage = ({
+  errorCode = 404,
+  title = "UPSSS parece que hubo un error",
+}) => {
   return (
     <Box
       sx={{
@@ -14,8 +17,8 @@ const ErrorPage = () => {
       <Container maxWidth="md">
         <Grid container spacing={2}>
           <Grid item xs={6}>
-            <Typography variant="h1">404</Typography>
-            <Typography variant="h6">UPSSS parece que hubo un error</Typography>
+            <Box variant="h1">{errorCode}</Box>
+            <Typography variant="h6">{title}</Typography>
             <Link to={"/"}>
               <Button variant="contained">Volver</Button>
             </Link>

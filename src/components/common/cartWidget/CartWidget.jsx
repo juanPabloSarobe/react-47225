@@ -13,7 +13,7 @@ const CartWidget = () => {
         src=""
         fontSize="inherit"
       ></ShoppingCartOutlinedIcon>
-      <Badge badgeContent={total} color="warning"></Badge>
+      <Badge badgeContent={total} color="primary"></Badge>
     </div>
   );
 };

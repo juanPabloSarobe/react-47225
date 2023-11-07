@@ -1,24 +1,5 @@
 export const productsMockup = [
   {
-    id: 1,
-    title: "Cerveza IPA",
-    price: 5.99,
-    stock: 4,
-    description: "Cerveza India Pale Ale, ligeramente amarga y aromática.",
-    category: "Cervezas",
-    img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104302/descarga_schjmg.jpg",
-  },
-  {
-    id: 2,
-    title: "Vino Tinto Reserva",
-    price: 12.99,
-    stock: 0,
-    description: "Vino tinto reserva de alta calidad, cosecha 2015.",
-    category: "Vinos",
-    img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104434/CeYiCOGWSUuyzWD_JuDsOg_ytj20a.jpg",
-  },
-  {
-    id: 3,
     title: "Whisky Escocés",
     price: 29.99,
     stock: 20,
@@ -27,7 +8,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104567/Jack-Daniels-Master-Distiller-N4-550x550_qvvkp4.png",
   },
   {
-    id: 4,
     title: "Ron Añejo",
     price: 19.99,
     stock: 25,
@@ -36,7 +16,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104541/ron-havana-club-7-anos_s9mxc4.png",
   },
   {
-    id: 5,
     title: "Ginebra Premium",
     price: 24.99,
     stock: 15,
@@ -45,7 +24,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104611/ventozelo-gin_tbmgg4.png",
   },
   {
-    id: 6,
     title: "Soda Limón",
     price: 1.49,
     stock: 50,
@@ -54,7 +32,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104654/61F7Y3rOWCL._AC_UF894_1000_QL80__xsimls.jpg",
   },
   {
-    id: 7,
     title: "Sidra",
     price: 6.99,
     stock: 35,
@@ -63,7 +40,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104693/BOTELLA-2_06d65695-b6aa-47c7-947e-c08083799f92_ojv5ow.jpg",
   },
   {
-    id: 8,
     title: "Champán Brut",
     price: 35.99,
     stock: 10,
@@ -72,7 +48,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104758/Dom-Perignon-2000-Fullview-Vintage-Grapes-GmbH_j7bcxt.jpg",
   },
   {
-    id: 9,
     title: "Tequila Reposado",
     price: 27.99,
     stock: 15,
@@ -81,7 +56,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105346/don-julio-reposado-web_xk0eft.png",
   },
   {
-    id: 10,
     title: "Té de Manzanilla",
     price: 2.29,
     stock: 30,
@@ -90,7 +64,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104790/41K9uMEPj8L._AC_UF894_1000_QL80__jugepp.jpg",
   },
   {
-    id: 11,
     title: "Cerveza Lager",
     price: 4.99,
     stock: 60,
@@ -100,7 +73,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104824/61uqEd22CxL._AC_UF1000_1000_QL80__xdft24.jpg",
   },
   {
-    id: 12,
     title: "Ginebra de Bayas",
     price: 23.99,
     stock: 15,
@@ -110,7 +82,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104859/page_1_thumb_large_zizdmd.jpg",
   },
   {
-    id: 13,
     title: "Refresco de Uva",
     price: 1.99,
     stock: 45,
@@ -119,7 +90,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104891/7135S3EOy7L._AC_UF894_1000_QL80__ptojip.jpg",
   },
   {
-    id: 14,
     title: "Jugo de Limón Natural",
     price: 2.49,
     stock: 50,
@@ -128,7 +98,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104959/61IT_XG5v5L._AC_UF894_1000_QL80__v17tc2.jpg",
   },
   {
-    id: 15,
     title: "Cerveza Porter",
     price: 6.49,
     stock: 40,
@@ -138,7 +107,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105427/61OJjO1jYxL._AC_UF894_1000_QL80__n4h0sh.jpg",
   },
   {
-    id: 16,
     title: "Vodka de Frambuesa",
     price: 29.99,
     stock: 20,
@@ -147,7 +115,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105016/0000971_stolichnaya-vodka-375-ml_510_uzamkl.jpg",
   },
   {
-    id: 17,
     title: "Té Verde con Menta",
     price: 2.29,
     stock: 30,
@@ -156,7 +123,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105063/51on2OFxoZL._AC_UF1000_1000_QL80__o0ogwb.jpg",
   },
   {
-    id: 18,
     title: "Whisky Bourbon",
     price: 22.99,
     stock: 25,
@@ -165,7 +131,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105102/71ph6H8SaOL_bllbwt.jpg",
   },
   {
-    id: 19,
     title: "Cerveza Ámbar",
     price: 5.99,
     stock: 30,
@@ -174,7 +139,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105186/weihenstephan-1516-kellerbier-escerveza-1_tjwver.jpg",
   },
   {
-    id: 20,
     title: "Ron Blanco",
     price: 16.99,
     stock: 25,
@@ -183,7 +147,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105230/bacardi-blanco-1_xneqpr.jpg",
   },
   {
-    id: 21,
     title: "Vodka de Lujo",
     price: 39.99,
     stock: 12,
@@ -192,7 +155,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105267/beluga-noble-russian-vodka-70-cl_q7i4x2.jpg",
   },
   {
-    id: 22,
     title: "Cerveza de Trigo",
     price: 5.99,
     stock: 40,
@@ -202,7 +164,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105303/4cb9d63b0a39d1857d57b29321856b29_640x640_ut8gdz.jpg",
   },
   {
-    id: 23,
     title: "Ron Dorado",
     price: 14.99,
     stock: 20,
@@ -212,7 +173,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105469/BarceloDorado_elu3gl.png",
   },
   {
-    id: 24,
     title: "Agua con Gas",
     price: 1.79,
     stock: 60,
@@ -221,7 +181,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105510/5190gMxiCdL_eblqqd.jpg",
   },
   {
-    id: 25,
     title: "Té de Hibisco",
     price: 2.49,
     stock: 30,
@@ -230,7 +189,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105575/71jetkbRkKL._AC_UF894_1000_QL80__ef7ch9.jpg",
   },
   {
-    id: 26,
     title: "Vino Rosado",
     price: 7.99,
     stock: 35,
@@ -239,7 +197,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105607/lagosta-rose_s9kpdr.png",
   },
   {
-    id: 27,
     title: "Ginebra de Enebro",
     price: 21.99,
     stock: 22,
@@ -249,7 +206,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106284/botella-seca-tradicional-con-las-bayas-enebro-del-verde-de-la-ginebra-estilo-plano-85863813_sicnar.jpg",
   },
   {
-    id: 28,
     title: "Cerveza Blonde Ale",
     price: 5.29,
     stock: 28,
@@ -259,7 +215,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106316/GUEST_e288f6a5-d863-41d9-a79a-de87807abf34_fykodt.jpg",
   },
   {
-    id: 29,
     title: "Vino Tinto Reserva",
     price: 12.99,
     stock: 20,
@@ -269,7 +224,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106347/copy-of-estancia-mendoza-malbec-750-ml_jjdt0c.png",
   },
   {
-    id: 30,
     title: "Cóctel Mojito",
     price: 7.99,
     stock: 30,
@@ -278,7 +232,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106401/81oUX6Rj1UL._AC_UF894_1000_QL80__habbaa.jpg",
   },
   {
-    id: 31,
     title: "Cerveza Amber Ale",
     price: 5.79,
     stock: 25,
@@ -288,7 +241,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106428/ci-patagonia-amber-lager-84b4712bf160567e_akqwd8.png",
   },
   {
-    id: 32,
     title: "Ron Añejado Dulce",
     price: 18.49,
     stock: 22,
@@ -298,7 +250,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106499/Puntacana_Black-Rum-min-1_f68ncr.jpg",
   },
   {
-    id: 33,
     title: "Agua Mineral",
     price: 1.29,
     stock: 60,
@@ -308,7 +259,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106538/33cc3f47-d3e2-4ad7-8126-5e91e6d01007_1.59db4fe77e79edfa439e0429b229e0c9_fdc7nk.jpg",
   },
   {
-    id: 34,
     title: "Cerveza Pale Ale",
     price: 5.49,
     stock: 30,
@@ -317,7 +267,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106571/Extra-Pale-Ale-Website_emczqe.png",
   },
   {
-    id: 35,
     title: "Vodka Premium",
     price: 32.99,
     stock: 18,
@@ -327,7 +276,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106615/Pre-Order-Grey-Goose-Vodka_uhv1ku.jpg",
   },
   {
-    id: 36,
     title: "Refresco de Limón",
     price: 1.49,
     stock: 40,
@@ -336,7 +284,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106656/refresco-chinotto-limon-rincon-abuela-venezolana_hsiaqv.jpg",
   },
   {
-    id: 37,
     title: "Refresco de Naranja",
     price: 1.79,
     stock: 50,
@@ -345,7 +292,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105807/Orange-Crush-Drink-12-oz-Refresco-de-Naranja_ae6399ca-5987-40c1-abd2-143d4e44984e_1.d57cb047bccd8d853fedacdd6af3bd9b_ue4tou.jpg",
   },
   {
-    id: 38,
     title: "Vino Espumoso",
     price: 10.99,
     stock: 15,
@@ -354,7 +300,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105777/61qIyVR1_tL._AC_UF894_1000_QL80__kjhyze.jpg",
   },
   {
-    id: 39,
     title: "Tequila Silver",
     price: 19.99,
     stock: 20,
@@ -363,7 +308,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105727/blanko_20_281_29_grpqjd.png",
   },
   {
-    id: 40,
     title: "Café Espresso Doble",
     price: 4.49,
     stock: 35,
@@ -372,7 +316,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106706/81iid8jWYNL_czx6vl.jpg",
   },
   {
-    id: 41,
     title: "Combo de Cervezas",
     price: 15.99,
     stock: 20,
@@ -382,7 +325,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106774/carnaval_lupuladas_latasx12_2vasos_faghe7.png",
   },
   {
-    id: 42,
     title: "Combo de Cócteles Clásicos",
     price: 24.99,
     stock: 15,
@@ -392,7 +334,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106831/10-botellas-con-alcohol-para-cocteles_zwf8yo.webp",
   },
   {
-    id: 43,
     title: "Combo de Refrescos Variados",
     price: 8.99,
     stock: 25,
@@ -402,7 +343,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696106880/81Q7RtpoBWS_ncrgkf.jpg",
   },
   {
-    id: 44,
     title: "Combo de Licores",
     price: 32.99,
     stock: 18,
@@ -412,7 +352,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696108322/b24af6ac0fbd0499eccc5e6a8628795f_puc1kv.jpg",
   },
   {
-    id: 45,
     title: "Combo de Vinos",
     price: 29.99,
     stock: 12,
@@ -422,7 +361,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696108355/152969_nchigm.jpg",
   },
   {
-    id: 46,
     title: "Combo de Cervezas Artesanales",
     price: 18.99,
     stock: 22,
@@ -432,7 +370,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696108734/DPR_20BEERS_20FINALES-4_aij7dt.jpg",
   },
   {
-    id: 47,
     title: "Combo de Cervezas y Aperitivos",
     price: 21.99,
     stock: 17,
@@ -442,7 +379,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696108403/Combo-cerveza-pilsener_geyney.jpg",
   },
   {
-    id: 48,
     title: "Combo de Whiskys de Malta",
     price: 45.99,
     stock: 10,
@@ -452,7 +388,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696108465/__opt__aboutcom__coeus__resources__content_migration__serious_eats__drinks.seriouseats.com__images__2012__02__20120209singlemaltvsblendwhisky-deeecdf7b8b94cb38532133b093fca8b_vqyeem.jpg",
   },
   {
-    id: 49,
     title: "Combo de Vodka y Mixers",
     price: 27.99,
     stock: 14,
@@ -462,7 +397,6 @@ export const productsMockup = [
     img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696108514/White_Claw_Vodka_Soda_Cans_yjiooe.png",
   },
   {
-    id: 50,
     title: "Combo de Bebidas Tropicales",
     price: 19.99,
     stock: 20,

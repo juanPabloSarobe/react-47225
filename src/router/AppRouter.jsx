@@ -11,11 +11,6 @@ const AppRouter = () => {
   return (
     <Routes>
       <Route element={<Layout />}>
-        {/* <Route path="/" element={<ItemListContainer />} />
-        <Route path="/category/:categoryName" element={<ItemListContainer />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="itemDetail/:id" element={<ItemDetailContainer />} /> */}
-
         {routes.map(({ id, path, Element }) => {
           return <Route key={id} path={path} element={<Element />} />;
         })}

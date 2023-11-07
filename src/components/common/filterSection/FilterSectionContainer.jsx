@@ -16,7 +16,6 @@ const FilterSectionContainer = () => {
     },
   ]);
   useEffect(() => {
-    //console.log(categorias);
     let productsColection = collection(db, "productsMockup");
     getDocs(productsColection).then((res) => {
       let newArray = res.docs.map((prod) => {

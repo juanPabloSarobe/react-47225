@@ -13,7 +13,6 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     let itemCollection = collection(db, "productsMockup");
     let refDoc = doc(itemCollection, id);
-
     getDoc(refDoc).then((res) => {
       setItem({ id: res.id, ...res.data() });
     });
