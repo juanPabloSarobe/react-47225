@@ -15,6 +15,7 @@ const FilterSectionContainer = () => {
       img: "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1697320248/liquidStoreLogo_vrdfph.png",
     },
   ]);
+
   useEffect(() => {
     let productsColection = collection(db, "productsMockup");
     getDocs(productsColection).then((res) => {
@@ -22,8 +23,11 @@ const FilterSectionContainer = () => {
         return { id: prod.id, ...prod.data() };
       });
       setProducts(newArray);
+      console.log(newArray);
     });
-    //---------------------------------------------------------------
+  }, []);
+
+  useEffect(() => {
     products.map((elem) => {
       if (!categorias.some((cat) => cat.category === elem.category)) {
         const nuevaCat = {
@@ -41,9 +45,10 @@ const FilterSectionContainer = () => {
     });
 
     tarea.then((res) => {
+      console.log(res);
       setCatFinal(res);
     });
-  }, [categorias, products]);
+  }, [products]);
 
   return <FilterSection catFinal={catFinal} />;
 };

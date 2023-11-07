@@ -22,7 +22,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     let productsColection = collection(db, "productsMockup");
     let consulta;
-    debugger;
+
     if (!categoryName) {
       consulta = productsColection;
     } else {
@@ -35,19 +35,22 @@ const ItemListContainer = () => {
       let newArray = resp.docs.map((prod) => {
         return { id: prod.id, ...prod.data() };
       });
+      console.log(newArray);
+      console.log(consulta);
+      console.log(categoryName);
       setItems(newArray);
     });
   }, [categoryName]);
 
-  if (items.length === 0) {
-    return <ItemListSkeleton />;
-  } else {
-    return (
-      <>
-        <ItemList items={items} categoryName={categoryName} />{" "}
-      </>
-    );
-  }
+  return (
+    <>
+      {items.length <= 0 ? (
+        <ItemListSkeleton />
+      ) : (
+        <ItemList items={items} categoryName={categoryName} />
+      )}
+    </>
+  );
 };
 
 export default ItemListContainer;
