@@ -1,3 +1,4 @@
+import AddItemsToDBContainer from "../components/pages/addItemsToDB/AddItemsToDBContainer";
 import CartPageContainer from "../components/pages/cart/CartPageContainer";
 import CheckoutFormikContainer from "../components/pages/checkoutFormik/CheckoutFormikContainer";
 import ItemDetailContainer from "../components/pages/itemDetailContainer/ItemDetailContainer";
@@ -34,5 +35,10 @@ export const routes = [
     id: "checkout",
     path: "/checkout",
     Element: CheckoutFormikContainer,
+  },
+  {
+    id: "AddItemsToDB",
+    path: "/AddItemsToDB",
+    Element: AddItemsToDBContainer,
   },
 ];

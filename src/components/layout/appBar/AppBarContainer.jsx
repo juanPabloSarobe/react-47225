@@ -3,7 +3,11 @@ import AppBarReturn from "./AppBarReturn";
 
 /* const pages = ["Products", "Pricing", "Blog"]; */
 const pages = [];
-const settings = ["Error page", "Account", "Logout"];
+const settings = [
+  { title: "Error page", path: "/Error404" },
+  { title: "Add Items to DB", path: "/AddItemsToDB" },
+  { title: "Inicio", path: "/" },
+];
 
 const AppBarContainer = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);

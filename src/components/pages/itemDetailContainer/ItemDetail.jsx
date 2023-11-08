@@ -8,56 +8,14 @@ import Typography from "@mui/material/Typography";
 import { Container } from "@mui/system";
 import AddItemsContainer from "../../common/addItems/AddItemsContainer";
 import { Link } from "react-router-dom";
-import { Button, Skeleton, Stack } from "@mui/material";
+import { Button } from "@mui/material";
+import ItemDetailSkeleton from "./itemDetailSkeleton";
 
 const ItemDetail = ({ item, onAdd, estado }) => {
-  let existe;
-  if (estado.estado == "existe") {
-    existe = true;
-  } else if (estado.estado == "noExiste") {
-    existe = false;
-  } else {
-    existe = true;
-  }
-
   return (
     <>
       {estado.estado == "inicial" ? (
-        <Stack
-          spacing={1}
-          width={1 / 1}
-          gap={4}
-          p={4}
-          display={"flex"}
-          flexDirection={"row"}
-          flexWrap={"wrap"}
-          justifyContent={"center"}
-        >
-          <Box spacing={1} width={345}>
-            <Skeleton
-              variant="rounded"
-              animation="wave"
-              width={345}
-              height={140}
-            />
-            <Skeleton
-              variant="text"
-              animation="wave"
-              sx={{ fontSize: "2rem" }}
-            />
-            <Skeleton
-              variant="text"
-              animation="wave"
-              sx={{ fontSize: "1rem" }}
-            />
-            <Skeleton
-              variant="rectangular"
-              animation="wave"
-              width={140}
-              height={60}
-            />
-          </Box>
-        </Stack>
+        <ItemDetailSkeleton />
       ) : (
         <Container
           id="test"

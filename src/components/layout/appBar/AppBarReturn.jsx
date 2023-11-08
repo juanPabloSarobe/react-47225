@@ -58,7 +58,7 @@ const AppBarReturn = ({
                 onClick={handleOpenNavMenu}
                 /* color="inherit" */
               >
-                <MenuIcon />
+                {/*  <MenuIcon /> */}
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -149,12 +149,14 @@ const AppBarReturn = ({
                 onClose={handleCloseUserMenu}
               >
                 {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <MenuItem key={setting.title} onClick={handleCloseUserMenu}>
                     <Link
-                      to={"/Error404"}
+                      to={setting.path}
                       style={{ textDecoration: "none", color: "black" }}
                     >
-                      <Typography textAlign="center">{setting}</Typography>
+                      <Typography textAlign="center">
+                        {setting.title}
+                      </Typography>
                     </Link>
                   </MenuItem>
                 ))}

@@ -111,7 +111,6 @@ const CheckoutFormikContainer = () => {
   });
   return (
     <>
-      (
       <Paper
         elevation={12}
         sx={{
@@ -292,7 +291,6 @@ const CheckoutFormikContainer = () => {
           <CartTotal />
         </Box>
       </Paper>
-      )
     </>
   );
 };
