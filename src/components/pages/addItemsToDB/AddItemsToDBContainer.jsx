@@ -1,7 +1,7 @@
 import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../../firebaseConfig";
-import ItemDetailSkeleton from "../itemDetailContainer/itemDetailSkeleton";
+import ItemDetailSkeleton from "../itemDetailContainer/ItemDetailSkeleton";
 import AddItemsToDB from "./AddItemsToDB";
 
 const AddItemsToDBContainer = () => {

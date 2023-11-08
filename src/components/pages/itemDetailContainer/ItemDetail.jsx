@@ -9,7 +9,7 @@ import { Container } from "@mui/system";
 import AddItemsContainer from "../../common/addItems/AddItemsContainer";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
-import ItemDetailSkeleton from "./itemDetailSkeleton";
+import ItemDetailSkeleton from "./ItemDetailSkeleton";
 
 const ItemDetail = ({ item, onAdd, estado }) => {
   return (
@@ -65,11 +65,24 @@ const ItemDetail = ({ item, onAdd, estado }) => {
                 }}
               >
                 <Typography component="div" variant="h5">
-                  {estado.estado == "noExiste" && "Item no encontrado"}
+                  {estado.estado == "noExiste"
+                    ? "Item no encontrado"
+                    : item.title}
                 </Typography>
                 <Typography variant="h7" color="text.secondary" component="div">
-                  {estado.estado == "noExiste" &&
-                    "Por favor selecciona un item valido"}
+                  {estado.estado == "noExiste"
+                    ? "Por favor selecciona un item valido"
+                    : item.description}
+                </Typography>
+                <Typography
+                  variant="h6"
+                  color="text.primary"
+                  component="div"
+                  mt={2}
+                >
+                  {estado.estado == "noExiste"
+                    ? "Disculpa las molestias"
+                    : `Precio unitario: $${item.price}`}
                 </Typography>
                 <Box
                   sx={{

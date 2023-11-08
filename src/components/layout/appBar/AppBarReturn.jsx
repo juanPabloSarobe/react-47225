@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import SettingsIcon from "@mui/icons-material/Settings";
 import logo from "../../../assets/img/liquidStoreLogo.png";
 import { Link } from "react-router-dom";
 import CartWidget from "../../common/cartWidget/CartWidget";
@@ -128,8 +129,12 @@ const AppBarReturn = ({
                 </Tooltip>
               </Link>
               <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="" />
+                <IconButton
+                  onClick={handleOpenUserMenu}
+                  size="large"
+                  sx={{ p: 0 }}
+                >
+                  <SettingsIcon />
                 </IconButton>
               </Tooltip>
               <Menu
