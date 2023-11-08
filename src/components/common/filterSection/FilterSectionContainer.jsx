@@ -22,8 +22,8 @@ const FilterSectionContainer = () => {
       let newArray = res.docs.map((prod) => {
         return { id: prod.id, ...prod.data() };
       });
+
       setProducts(newArray);
-      console.log(newArray);
     });
   }, []);
 
@@ -35,20 +35,22 @@ const FilterSectionContainer = () => {
           category: elem.category,
           img: elem.img,
         };
-
-        return setCategorias([...categorias, nuevaCat]);
+        //return setCategorias([...categorias, nuevaCat]);
+        setCategorias([...categorias, nuevaCat]);
       }
-    });
 
+      //console.log(categorias);
+    });
+    console.log(categorias);
     const tarea = new Promise((resolve, reject) => {
       resolve(categorias);
     });
 
     tarea.then((res) => {
-      console.log(res);
       setCatFinal(res);
     });
-  }, [products]);
+    //console.log(categorias);
+  }, [products, categorias]);
 
   return <FilterSection catFinal={catFinal} />;
 };

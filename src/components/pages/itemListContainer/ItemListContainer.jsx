@@ -35,9 +35,7 @@ const ItemListContainer = () => {
       let newArray = resp.docs.map((prod) => {
         return { id: prod.id, ...prod.data() };
       });
-      console.log(newArray);
-      console.log(consulta);
-      console.log(categoryName);
+
       setItems(newArray);
     });
   }, [categoryName]);

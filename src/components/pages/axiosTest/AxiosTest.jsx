@@ -10,7 +10,6 @@ const AxiosTest = () => {
       setDatos(resp.data);
     });
   }, []);
-  console.log(datos);
 
   // ----------------------------------------
 
@@ -31,10 +30,10 @@ const AxiosTest = () => {
   axios
     .request(config)
     .then((response) => {
-      console.log(JSON.stringify(response.data));
+      c onsole.log(JSON.stringify(response.data));
     })
     .catch((error) => {
-      console.log(error);
+      c onsole.log(error);
     }); */
 
   return <div>datos</div>;
