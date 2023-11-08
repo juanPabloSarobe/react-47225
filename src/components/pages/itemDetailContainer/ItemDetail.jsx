@@ -81,7 +81,7 @@ const ItemDetail = ({ item, onAdd, estado }) => {
                   mt={2}
                 >
                   {estado.estado == "noExiste"
-                    ? "Disculpa las molestias"
+                    ? "Disculpe las molestias"
                     : `Precio unitario: $${item.price}`}
                 </Typography>
                 <Box
