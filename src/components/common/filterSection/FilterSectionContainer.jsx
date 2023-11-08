@@ -28,20 +28,18 @@ const FilterSectionContainer = () => {
   }, []);
 
   useEffect(() => {
-    products.map((elem) => {
+    products.forEach((elem) => {
       if (!categorias.some((cat) => cat.category === elem.category)) {
         const nuevaCat = {
           id: elem.category,
           category: elem.category,
           img: elem.img,
         };
-        //return setCategorias([...categorias, nuevaCat]);
+
         setCategorias([...categorias, nuevaCat]);
       }
-
-      //console.log(categorias);
     });
-    console.log(categorias);
+
     const tarea = new Promise((resolve, reject) => {
       resolve(categorias);
     });
@@ -49,7 +47,6 @@ const FilterSectionContainer = () => {
     tarea.then((res) => {
       setCatFinal(res);
     });
-    //console.log(categorias);
   }, [products, categorias]);
 
   return <FilterSection catFinal={catFinal} />;
