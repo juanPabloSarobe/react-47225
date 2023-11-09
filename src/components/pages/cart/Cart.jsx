@@ -7,7 +7,6 @@ import {
   Stack,
   Tooltip,
   Typography,
-  useTheme,
 } from "@mui/material";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { useContext } from "react";
@@ -15,15 +14,7 @@ import { CartContext } from "../../../context/CartContext";
 import AddItemCart from "../../common/addItems/AddItemCart";
 
 const Cart = () => {
-  const {
-    cart,
-    totalItems,
-    clearCart,
-    addOneToItem,
-    removeOneToItem,
-    deleteProduct,
-  } = useContext(CartContext);
-  const theme = useTheme();
+  const { cart, deleteProduct } = useContext(CartContext);
 
   return (
     <Box

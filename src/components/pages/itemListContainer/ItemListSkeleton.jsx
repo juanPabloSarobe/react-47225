@@ -1,5 +1,4 @@
-import { Margin } from "@mui/icons-material";
-import { Box, Skeleton, Stack, Typography } from "@mui/material";
+import { Box, Skeleton, Stack } from "@mui/material";
 
 const ItemListSkeleton = () => {
   const skeletonArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

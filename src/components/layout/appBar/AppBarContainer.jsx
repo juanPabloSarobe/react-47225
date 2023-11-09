@@ -1,7 +1,6 @@
 import { useState } from "react";
 import AppBarReturn from "./AppBarReturn";
 
-/* const pages = ["Products", "Pricing", "Blog"]; */
 const pages = [];
 const settings = [
   { title: "Error page", path: "/Error404" },

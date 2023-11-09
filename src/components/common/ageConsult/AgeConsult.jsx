@@ -54,7 +54,3 @@ const AgeConsult = () => {
 };
 
 export default AgeConsult;
-
-/* function guardaCarrito() {
-  localStorage.setItem("carritoLocal", JSON.stringify(carrito));
-} */

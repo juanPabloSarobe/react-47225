@@ -1,4 +1,3 @@
-// import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";

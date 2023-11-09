@@ -1,4 +1,4 @@
-import { Paper, Typography } from "@mui/material";
+import { Paper } from "@mui/material";
 import Cart from "./Cart";
 import CartButtons from "./CartButtons";
 import CartTitle from "./CartTitle";

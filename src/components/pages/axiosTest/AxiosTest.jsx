@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
+// NO SE UTILIZA, PERO SE DEJA COMO REFERENCIA
+
 const AxiosTest = () => {
   const [datos, setDatos] = useState([]);
 

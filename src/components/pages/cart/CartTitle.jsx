@@ -1,5 +1,4 @@
 import { Box, IconButton, Stack, Tooltip, Typography } from "@mui/material";
-
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
