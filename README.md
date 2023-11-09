@@ -6,7 +6,12 @@
 
 <h2>🚀 Demo</h2>
 
-[https://react-47225.vercel.app/](https://react-47225.vercel.app/)
+[Visitar pagina de muestra en Vercel](https://react-47225.vercel.app/)
+
+<br/>
+<h2>Video Demo</h2>
+
+[Ver video de ejemplo](https://res.cloudinary.com/dg8ndxl2y/video/upload/v1699495815/Capturas/proyectoFinal-Sarobe.mp4)
 
 <h2>Project Screenshots:</h2>
 
